@@ -5,10 +5,46 @@
     xmlns:local="using:UpKeepV2.App"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1803="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 6)"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <NavigationView
+            Name="Navigation"
+            Windows10version1803:IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            SelectionChanged="Navigation_SelectionChanged">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Name="Start" Tag="Start" Icon="Home" Content="Start"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Sektion"/>
+                <NavigationViewItem Name="MedarbejderInfo" Tag="MedarbejderInfo" Content="MedarbejderInfo">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
 
+            <NavigationView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="24,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding}" Style="{StaticResource HeaderTextBlockStyle}"/>
+                    </Grid>
+                </DataTemplate>
+            </NavigationView.HeaderTemplate>
+
+            <Frame x:Name="rootFrame" NavigationFailed="RootFrame_NavigationFailed">
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center">UpKeep</TextBlock>
+                        <Image Width="200" Source="../Assets/KBH_Maerke_DK_Blue_RGB.png" Margin="630,0,630,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </StackPanel>
+                </Grid>
+            </Frame>
+        </NavigationView>
     </Grid>
 </Page>
