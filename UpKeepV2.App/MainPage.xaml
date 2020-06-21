@@ -40,8 +40,8 @@
             <Frame x:Name="rootFrame" NavigationFailed="RootFrame_NavigationFailed">
                 <Grid>
                     <StackPanel>
-                        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center">UpKeep</TextBlock>
-                        <Image Width="200" Source="../Assets/KBH_Maerke_DK_Blue_RGB.png" Margin="630,0,630,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="225">UpKeep</TextBlock>
+                        <Image Source="../Assets/SplashScreen.scale-400.png" HorizontalAlignment="Stretch" Height="949" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
                     </StackPanel>
                 </Grid>
             </Frame>
