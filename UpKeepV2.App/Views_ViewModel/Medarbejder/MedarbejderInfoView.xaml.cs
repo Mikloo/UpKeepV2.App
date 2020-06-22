@@ -48,6 +48,12 @@ namespace UpKeepV2.App.Views
             this.Frame.Navigate(typeof(MedarbejderInfoCreate));
         }
 
+        private void mySearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
+        {
+            this.Frame.Navigate(typeof(MedarbejderInfoView), args.QueryText);
+        }
+
+
 
         //private void DataGrid_Sorting(object sender, DataGridColumnEventArgs e) =>
         //    (sender as DataGrid).Sort(e.Column, ViewModel.MedarbejderInfo.Sort);

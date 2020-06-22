@@ -32,7 +32,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding}" Style="{StaticResource HeaderTextBlockStyle}"/>
+                        <!--<TextBlock Text="{Binding}" Style="{StaticResource HeaderTextBlockStyle}"/>-->
                     </Grid>
                 </DataTemplate>
             </NavigationView.HeaderTemplate>
@@ -40,8 +40,9 @@
             <Frame x:Name="rootFrame" NavigationFailed="RootFrame_NavigationFailed">
                 <Grid>
                     <StackPanel>
-                        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="225">UpKeep</TextBlock>
-                        <Image Source="../Assets/SplashScreen.scale-400.png" HorizontalAlignment="Stretch" Height="949" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="225" FontSize="70">UpKeep</TextBlock>
+                        <TextBlock Style="{StaticResource TitleTextBlockStyle}" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="320" FontSize="25" TextAlignment="Center" FontStyle="Oblique">Managing Never Done Easier</TextBlock>
+                        <Image Source="../Assets/SplashScreen.scale-400.png" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
                     </StackPanel>
                 </Grid>
             </Frame>
